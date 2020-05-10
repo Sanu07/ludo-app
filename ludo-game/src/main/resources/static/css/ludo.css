@@ -1,114 +1,158 @@
 * {
-    border: 0;
-    padding: 0;
-    margin: 0;
-    outline: 0;
-    box-sizing:border-box;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	outline: 0;
+	box-sizing: border-box;
 }
+
 .game {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 20px auto;
-    position: relative;
-    width: 500px;
-    height: 500px;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 20px auto;
+	position: relative;
+	width: 500px;
+	height: 500px;
 }
+
 .green {
-    background-color: #66bb6a;
+	background-color: #66bb6a;
 }
+
 .red {
-    background-color: #e53935;
-    border: none;
+	background-color: #e53935;
+	border: none;
 }
+
 .yellow {
-    background-color: #fff176;
-    border: none;
+	background-color: #fff176;
+	border: none;
 }
+
 .blue {
-    background-color: #29b6f6;
-    border: none;
+	background-color: #29b6f6;
+	border: none;
 }
 
 .house {
-    display: inline-block;
-    position: absolute;
-    width:40%;
-    height:40%;
-    padding:7%;
+	display: inline-block;
+	position: absolute;
+	width: 40%;
+	height: 40%;
+	padding: 7%;
 }
-.box {
-    position: relative;
-    width:100%;
-    height:100%;
-    background-color:white;
-    padding:20%;
-}
-.square {
-    position: absolute;
-    width:25%;
-    height:25%;
 
+.box {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	padding: 20%;
 }
+
+.square {
+	position: absolute;
+	width: 25%;
+	height: 25%;
+}
+
 .square-one {
-    top:20%;
-    left:20%;
+	top: 20%;
+	left: 20%;
 }
+
 .square-two {
-    top: 20%;
-    right: 20%;
+	top: 20%;
+	right: 20%;
 }
+
 .square-three {
-    bottom: 20%;
-    left: 20%;
+	bottom: 20%;
+	left: 20%;
 }
+
 .square-four {
-    bottom: 20%;
-    right: 20%;
+	bottom: 20%;
+	right: 20%;
 }
+
 .home {
-    position: absolute;
-    top:40%;
-    left: 40%;
-    width: 20%;
-    height: 20%;
-    border-bottom: 20px solid #e53935;
-    border-top: 20px solid #fff176;
-    border-left: 20px solid #66bb6a;
-    border-right: 20px solid #29b6f6;
+	position: absolute;
+	top: 40%;
+	left: 40%;
+	width: 20%;
+	height: 20%;
+	border-bottom: 20px solid #e53935;
+	border-top: 20px solid #fff176;
+	border-left: 20px solid #66bb6a;
+	border-right: 20px solid #29b6f6;
 }
+
 .cells {
-    position: absolute;
-    width: 6.66% ;
-    height: 6.66%;
-    border-collapse: collapse;
-    border: 1px solid #29272769 ;
+	position: absolute;
+	width: 6.66%;
+	height: 6.66%;
+	border-collapse: collapse;
+	border: 1px solid #29272769;
 }
 
 .safe {
-    -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+	-webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%,
+		32% 57%, 2% 35%, 39% 35%);
+	clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%,
+		32% 57%, 2% 35%, 39% 35%);
 }
-.g-start {
-    background-color: #66bb6a;
-    -webkit-clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    transform: rotate(90deg);
 
+.g-start {
+	background-color: #66bb6a;
+	-webkit-clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%,
+		100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	transform: rotate(90deg);
 }
+
 .y-start {
-    background-color: #fff176;
-    -webkit-clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    transform: rotate(180deg);
+	background-color: #fff176;
+	-webkit-clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%,
+		100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	transform: rotate(180deg);
 }
+
 .r-start {
-    background-color: #e53935;
-    -webkit-clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	background-color: #e53935;
+	-webkit-clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%,
+		100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
+
 .b-start {
-    background-color: #29b6f6;
-    -webkit-clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    transform: rotate(270deg);
+	background-color: #29b6f6;
+	-webkit-clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%,
+		100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	transform: rotate(270deg);
+}
+
+.btn-circle.btn-sm {
+	width: 25px;
+	height: 25px;
+	padding: 6px 0px;
+	border-radius: 15px;
+	font-size: 8px;
+	text-align: center;
+	margin-left: 4px;
+    margin-top: 3px;
+}
+.btn-primary.btn-circle.btn-sm {
+	background-image: radial-gradient(#ffffff, #0066ff, #0033cc);
+}
+.btn-success.btn-circle.btn-sm {
+	background-image: radial-gradient(#ffffff, #4d9900, #336600);
+}
+.btn-warning.btn-circle.btn-sm {
+	background-image: radial-gradient(#ffffff, #ffd11a, #e6b800);
+}
+.btn-danger.btn-circle.btn-sm {
+	background-image: radial-gradient(#ffffff, #e63900, #ffc6b3);
 }
