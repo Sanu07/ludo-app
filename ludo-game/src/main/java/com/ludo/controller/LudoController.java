@@ -20,11 +20,14 @@ public class LudoController {
 	private int index = 0;
 	private int chance = 1;
 	
-	@GetMapping("/rollDice")
-	public RollingInfo handleRollingDice() {
+	@GetMapping("/rollDice/{chance}")
+	public RollingInfo handleRollingDice(@PathVariable ("chance") int continueChance) {
 		RollingInfo rollInfo = new RollingInfo();
 		int randomNumber = (int) ((Math.random() * ((10 - 1) + 1)) + 1);
 		randomNumber = randomNumber % 6 + 1;
+		if (continueChance != 0) {
+			chance = continueChance;
+		}
 		rollInfo.setChance(chance);
 		if (randomNumber != 6) {
 			chance++;

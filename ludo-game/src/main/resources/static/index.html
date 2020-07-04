@@ -5,6 +5,7 @@
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/ludo.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
 
 	</script>
@@ -100,7 +101,7 @@
 
 		<div id="11" class="cells" style="top: 0; left: 40%;"></div>
 		<div id="10" class="cells" style="top: 6.66%; left: 40%;"></div>
-		<div id="9" class="cells safe yellow" style="top: 13.32%; left: 40%;"></div>
+		<div id="9" class="cells safe" style="top: 13.32%; left: 40%; border-color: yellow"></div>
 		<div id="8" class="cells" style="top: 19.98%; left: 40%;"></div>
 		<div id="7" class="cells" style="top: 26.64%; left: 40%;"></div>
 		<div id="6" class="cells" style="top: 33.3%; left: 40%;"></div>
@@ -122,7 +123,7 @@
 		<div id="24" class="cells" style="top: 40%; right: 33.3%"></div>
 		<div id="25" class="cells" style="top: 40%; right: 26.64%;"></div>
 		<div id="26" class="cells" style="top: 40%; right: 19.98%;"></div>
-		<div id="27" class="cells safe blue" style="top: 40%; right: 13.32%;"></div>
+		<div id="27" class="cells safe" style="top: 40%; right: 13.32%; border-color: blue;"></div>
 		<div id="28" class="cells" style="top: 40%; right: 6.66%;"></div>
 		<div id="29" class="cells" style="top: 40%; right: 0;"></div>
 
@@ -142,7 +143,7 @@
 
 		<div id="47" class="cells" style="bottom: 0; left: 53.32%;"></div>
 		<div id="46" class="cells" style="bottom: 6.66%; left: 53.32%;"></div>
-		<div id="45" class="cells safe red" style="bottom: 13.32%; left: 53.32%;"></div>
+		<div id="45" class="cells safe" style="bottom: 13.32%; left: 53.32%; border-color: red"></div>
 		<div id="44" class="cells" style="bottom: 19.98%; left: 53.32%;"></div>
 		<div id="43" class="cells" style="bottom: 26.64%; left: 53.32%;"></div>
 		<div id="42" class="cells" style="bottom: 33.3%; left: 53.32%;"></div>
@@ -164,7 +165,7 @@
 		<div id="60" class="cells" style="top: 53.32%; left: 33.3%"></div>
 		<div id="61" class="cells" style="top: 53.32%; left: 26.64%;"></div>
 		<div id="62" class="cells" style="top: 53.32%; left: 19.98%;"></div>
-		<div id="63" class="cells safe green" style="top: 53.32%; left: 13.32%;"></div>
+		<div id="63" class="cells safe" style="top: 53.32%; left: 13.32%; border-color: green"></div>
 		<div id="64" class="cells" style="top: 53.32%; left: 6.66%;"></div>
 		<div id="65" class="cells" style="top: 53.32%; left: 0;"></div>
 
@@ -175,12 +176,10 @@
 		<div id="67" class="cells green" style="top: 46.66%; left: 6.66%;"></div>
 		<div id="66" class="cells" style="top: 46.66%; left: 0;"></div>
 	</div>
-	<div style="margin-left: 50%">
-		<button type="button" onclick="rollDice()" class="btn btn-outline-primary">Play</button>
-		<div class="cells" style="display: inline; margin-left: 10px; width: 40px; height: 40px;">
-			<span id="rolled-value">
-				<h2 style="margin-left: 10px;"></h2>
-			</span>
+	<div style="margin-left: 50%" class="row">
+		<button id="roll-button" type="button" onclick="rollDice()" class="btn btn-outline-secondary">Play</button>
+		<div id="roll-view" style="margin-left: 10px; width: 40px; height: 40px;">
+			<span id="loader" style="display: none; margin-left: 4px; margin-top: 3px" class="spinner-border spinner-border-md"></span>
 		</div>
 	</div>
 </body>
