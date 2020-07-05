@@ -13,25 +13,25 @@ function movePiece(piece) {
 		$(piece).data('startPos', $(piece).parent().prop('className'));
 		switch (rollingInfo.chance) {
 			case 1: {
-				$('.g-start').append(piece);
+				$('.g-start').append($(piece).hide().fadeIn(1000));
 				$(piece).parent().html();
 				$(piece).data('pos', 1);
 				break;
 			}
 			case 2: {
-				$('.y-start').append(piece);
+				$('.y-start').append($(piece).hide().fadeIn(1000));
 				$(piece).parent().html();
 				$(piece).data('pos', 19);
 				break;
 			}
 			case 3: {
-				$('.b-start').append(piece);
+				$('.b-start').append($(piece).hide().fadeIn(1000));
 				$(piece).parent().html();
 				$(piece).data('pos', 37);
 				break;
 			}
 			case 4: {
-				$('.r-start').append(piece);
+				$('.r-start').append($(piece).hide().fadeIn(1000));
 				$(piece).parent().html();
 				$(piece).data('pos', 55);
 				break;
@@ -56,11 +56,11 @@ function movePiece(piece) {
 				$("." + className.replace(/\s/g, '.')).append("<i class=\"fas fa-check\" style=\"color: green;\"></i>");
 				$('.btn-' + PIECE_CSS_CLASS[rollingInfo.chance]).prop('disabled', true);
 				$('#roll-button').prop('disabled', false);
-				$(piece).remove();
 				isEligibleToMove = false;
 				if ($(".box .square .fa-check").length !== 4) {
 					GLOBAL_CHANCE = $(piece).data("rollingInfo").chance;
 				}
+				$(piece).remove();
 			}
 		}
 		if (isEligibleToMove && ($("#" + moveToPos).hasClass('cells') && $("#" + moveToPos).is('.green, .yellow, .blue, .red'))
@@ -73,7 +73,7 @@ function movePiece(piece) {
 			moveToPos -= 72;
 		}
 		if (isEligibleToMove) {
-			$('#' + moveToPos).append(piece);
+			$('#' + moveToPos).append($(piece).hide().fadeIn(1000));
 			adjustMultiplePieces(currentPos, piece);
 			adjustMultiplePieces(moveToPos, piece);
 			$(piece).data('pos', moveToPos);
@@ -93,7 +93,7 @@ function adjustMultiplePieces(pos, piece) {
 			if ($(piece).data('rollingInfo').chance !== $(child).data('rollingInfo').chance
 					&& !(safePos.includes('start') || safePos.includes('safe'))) {
 				var className = $(child).data('startPos'); 
-				$("." + className.replace(/\s/g, '.')).append(child);
+				$("." + className.replace(/\s/g, '.')).append($(child).hide().fadeIn(1000));
 				$(child).removeData();
 				GLOBAL_CHANCE = $(piece).data('rollingInfo').chance;
 			} else {
@@ -167,7 +167,7 @@ function isPlayerEligibleToMoveAnyPiece(rollingInfo) {
 			  ++count;
 		  }
 	});
-	if (count !== 4) {
+	if (count !== children.length) {
 		$('#roll-button').prop('disabled', true);
 	}
 }
