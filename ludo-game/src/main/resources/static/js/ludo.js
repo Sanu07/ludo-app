@@ -117,7 +117,7 @@ function rollDice() {
 				$('#loader').hide();
 				$('#roll-view').append('<img alt="' + response.rolledValue + '" height="40px" src="http://roll.diceapi.com/images/poorly-drawn/d6/' + response.rolledValue + '.png"/>');
 				isPlayerEligibleToMoveAnyPiece(response);
-			}, 100);
+			}, 200);
 			activatePieces(response);
 			GLOBAL_CHANCE = 0;
 		}
