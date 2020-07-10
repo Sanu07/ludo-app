@@ -158,7 +158,7 @@ function activatePieces(rollingInfo) {
 }
 
 function isPlayerEligibleToMoveAnyPiece(rollingInfo) {
-	var children = $('.box .btn-' + PIECE_CSS_CLASS[rollingInfo.chance]);
+	var children = $('div .btn-' + PIECE_CSS_CLASS[rollingInfo.chance]);
 	var count = 0;
 	$.each(children, function( index, child ) {
 		  var isNotAbleToMove = !$(child).data('remDist') && (rollingInfo.rolledValue !== 6);
